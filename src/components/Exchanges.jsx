@@ -24,10 +24,10 @@ const Exchanges = () => {
     fetchExchanges();
   }, [])
 
-  if (error) return <ErrorComponent />
+  if (error) return <ErrorComponent message={"error while fetching exchanges"}/>
   return <Container maxW={"container.xl"}>
     {loading ? <Loader /> : <>
-      <HStack wrap={"wrap"}>
+      <HStack wrap={"wrap"} justifyContent={"center"}>
         {
           exchanges.map((i) => (
             <ExchangeCard 
