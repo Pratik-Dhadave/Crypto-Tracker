@@ -39,7 +39,7 @@ const Coins = () => {
 
   if (error) return <ErrorComponent message={"error while fetching coins"} />
   return <Container maxW={"container.xl"}>
-    {loading ? <Loader /> : 
+    {loading ?( <Loader />) :( 
     <>
     <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
       <HStack spacing={"4"}>
@@ -75,7 +75,7 @@ const Coins = () => {
             </Button>
           ))}
       </HStack>
-    </>}
+    </>)}
   </Container>
 }
 
